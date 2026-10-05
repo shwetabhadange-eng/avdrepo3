@@ -1,1 +1,24 @@
+#GitHub workflow - YAML GitHub workflow(github-workflow.json)
+name: pipeline
+
+on:
+  push:
+    branches:
+        - main
+      
+jobs:
+  run-python-code:
+    runs-on: ubuntu-latest
+  
+
+    setps:
+        - name: checkout code
+          uses: action/checkout@v7
+
+        - name: python version
+          run: python --version
+          
+        - name: run python program
+          run: python welcome.py
+
 
