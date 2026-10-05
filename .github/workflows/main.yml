@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: checkout code
         uses: action/checkout@v7
-      - name: run python code
+      - name: run Python code
         run: python extract.py
       
 
@@ -22,16 +22,16 @@ jobs:
     steps:
      - name: checkout code
        uses: action/checkout@v7
-     - name: run python code
+     - name: run Python code
        run: python transform.py
 
   load-job:
     needs: transform-job
     runs-on: ubuntu-latest
-  steps:
+    steps:
      - name: checkout code
        uses: action/checkout@v7
-     - name: run python code
+     - name: run Python code
        run: python load.py
   
 
