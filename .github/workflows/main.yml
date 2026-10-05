@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: action/checkout@v7
+        uses: actions/checkout@v7
       - name: run Python code
         run: python extract.py
       
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: checkout code
-       uses: action/checkout@v7
+       uses: actions/checkout@v7
      - name: run Python code
        run: python transform.py
 
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: checkout code
-       uses: action/checkout@v7
+       uses: actions/checkout@v7
      - name: run Python code
        run: python load.py
   
